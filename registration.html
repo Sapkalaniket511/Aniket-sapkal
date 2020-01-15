@@ -1,10 +1,31 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Registration Form</title>
+        <style>
+        body{
+            background-color:linen;
+           
+        }
+        h1{
+            color:red;
+            margin-left:20px;
+        }
+        h2{
+            color:blue;
+            
+        }
+        </style>
+        <h1 align="center">REGISTRATION FORM</h1>
     </head>
     <body>
-        <table align="center" cellpadding="20">
+        <table align="center" cellpadding="10">
             <form>
+                <tr>
+                <td>
+                <h2 align="centre">Personal Details:</h2>
+                </td>
+                </tr>
                 <tr>
                     <td>First Name:</td>
                     <td>
@@ -31,6 +52,16 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Date Of Birth:</td>
+                    <td>
+                        <input type="date" name="date"><br>
+                    </td>
+                </tr>
+                <tr>
+                <td>
+                <h2 align="centre">Contact Details:</h2>
+                </td>
+                </tr>
                     <td>Email:</td>
                     <td>
                         <input type="email" name="email"><br>
@@ -43,17 +74,41 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Date Of Birth</td>
-                    <td>
-                        <input type="date" name="date"><br>
-                    </td>
+                <td>
+                <h2 align="centre">Academic Details:</h2>
+                </td>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="submit" name="Submit" value="Submit">
-                    </td>
+                <td>Class</td>
+                <td>Marks</td>
+                <td>Year Of Passing</td>
                 </tr>
-            </form>
+                <tr>
+                <td>10th</td>
+                <td><input type="mark" name="mark"></td>
+                <td><input type="number" maxlength=4 value="year"></td>
+                </tr>
+                <tr>
+                <td>12th</td>
+                <td><input type="mark" name="mark"></td>
+                <td><input type="number" maxlength=4 value="year"></td>
+                </tr>
+                <tr>
+                <td>1st year</td>
+                <td><input type="mark" name="mark"></td>
+                <td><input type="number" maxlength=4 value="year"></td>
+                </tr>
+                <tr>
+                <td>2nd year</td>
+                <td><input type="mark" name="mark"></td>
+                <td><input type="number" maxlength=4 value="year"></td>
+                </tr>
+                 <tr>
+                    <td>
+                        <input type="submit" name="Submit" value="Submit" >
+                    </td>
+                 </tr>  
+           </form>
         </table>
     </body>
 </html>
