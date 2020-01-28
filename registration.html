@@ -16,15 +16,56 @@
             
         }
         </style>
+	<script type="text/javascript">
+	function validate()
+	{
+	var name= document.getElementById("name").value;
+	var password= document.getElementById("password").value;
+	var mobile=document.getElementById("mobile").value;
+	
+	if(name==null || name=="")
+	{
+	alert("plz enter the valid data");
+	return false;
+	}
+	else if(password==null || password.length<4)
+	{
+	alert("password must be greater than 4");
+	return false;
+	}
+	else if(mobile==null || mobile.length<10)
+	{
+	alert("Enter the valid mobile mobile no");
+	return false;
+	}
+	else
+	{
+	alert("validation done");
+	}
+	}
+	</script>
+
         <h1 align="center">REGISTRATION FORM</h1>
     </head>
     <body>
         <table align="center" cellpadding="10">
-            <form>
+            <form name="myform" onsubmit="return validate()">
                 <tr>
                 <td>
                 <h2 align="centre">Personal Details:</h2>
                 </td>
+                </tr>
+		 <tr>
+                    <td>uname:</td>
+                    <td>
+                        <input type="text" name="uid" id="name" ><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>password:</td>
+                    <td>
+                        <input type="password" name="password" id="password" ><br>
+                    </td>
                 </tr>
                 <tr>
                     <td>First Name:</td>
@@ -47,8 +88,8 @@
                 <tr>
                     <td>Gender:</td>
                     <td>
-                        Male<input type="radio" name="male" value="male" >
-                        female<input type="radio" name="male" value="female"><br>
+                        Male<input type="radio" name="male" value="male" id=="male">
+                        female<input type="radio" name="male" value="female" id=="female"><br>
                     </td>
                 </tr>
                 <tr>
@@ -64,13 +105,13 @@
                 </tr>
                     <td>Email:</td>
                     <td>
-                        <input type="email" name="email"><br>
+                        <input type="email" name="email" id="email"><br>
                     </td>
                 </tr>
                 <tr>
                     <td>Mobile No:</td>
                     <td>
-                        <input type="number" maxlength="10" name="num">
+                        <input type="number" maxlength="10" name="num" id="mobile">
                     </td>
                 </tr>
                 <tr>
@@ -105,7 +146,7 @@
                 </tr>
                  <tr>
                     <td>
-                        <input type="submit" name="Submit" value="Submit" >
+                        <input type="submit" name="Submit" value="Submit" onclick="validate()" >
                     </td>
                  </tr>  
            </form>
